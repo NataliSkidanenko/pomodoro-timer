@@ -1,0 +1,18 @@
+.mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--triple-step);
+    padding: var(--step) var(--double-step);
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--text-primary);
+    border-radius: 30px;
+
+    svg {
+        margin-right: var(--step);
+        path {
+            fill: var(--text-primary);
+        }
+    }
+}
