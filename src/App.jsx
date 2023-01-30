@@ -1,23 +1,26 @@
-import {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {selectColor, selectTheme, toggleTheme} from './rdx/reducer';
-import Option from './components/ModeIndicator/ModeIndicator';
-import {MODES, THEMES} from './data';
+import {useSelector} from 'react-redux';
+import ModeIndicator from './components/ModeIndicator/ModeIndicator';
+import Timer from './components/Timer/Timer';
+import ControlPanel from './components/ControlPanel/ControlPanel';
+import {selectMode, selectTheme} from './rdx/store';
+import {setStyleTheme} from './helpers';
+import GradientAnimation from './components/GradientAnimation/GradientAnimation';
 
 // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function App() {
-    const [mode, setMode] = useState(MODES[0]);
-    const [theme, setTheme] = useState(THEMES.dark);
-    const [color, setColor] = useState(mode.color);
-
-    document.body.dataset.theme = `${theme}-${color}`;
+    const {color, title, img, timeInMinutes: minutes, seconds, timer} = useSelector(selectMode);
+    const theme = useSelector(selectTheme);
+    setStyleTheme(theme, color);
 
     return (
         <div className="App">
             <div className="wrapper">
                 <div className="container">
-                    <Option img={mode.img} title={mode.title}></Option>
+                    <GradientAnimation />
+                    <ModeIndicator img={img} title={title}></ModeIndicator>
+                    <Timer minutes={minutes} seconds={seconds} />
+                    <ControlPanel />
                 </div>
             </div>
         </div>

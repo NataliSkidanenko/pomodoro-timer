@@ -1,0 +1,21 @@
+.options {
+    padding: var(--step);
+    position: absolute;
+    bottom: 108%;
+    left: 8px;
+    background-color: var(--options-color);
+    border-radius: calc(var(--step) * 2);
+    opacity: 1;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.039), 0px 5.5px 16px rgba(0, 0, 0, 0.19);
+
+    &__item {
+        display: flex;
+        padding: calc(var(--step) * 1.5);
+        align-items: center;
+        cursor: pointer;
+
+        svg {
+            margin-right: var(--step);
+        }
+    }
+}

@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: var(--triple-step);
-    padding: var(--step) var(--double-step);
+    margin-bottom: calc(var(--step) * 4);
+    padding: var(--step) calc(var(--step) * 2);
     font-size: 1.5rem;
     background-color: var(--secondary-color);
     border: 2px solid var(--text-primary);

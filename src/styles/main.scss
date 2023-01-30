@@ -3,8 +3,6 @@
 
 :root {
     --step: 8px;
-    --double-step: 16px;
-    --triple-step: 32px;
 }
 
 [data-theme='light-red'] {
@@ -12,6 +10,7 @@
     --text-primary: rgb(71, 21, 21);
     --secondary-color: rgba(255, 76, 76, 0.15);
     --accent-color: rgba(255, 76, 76, 0.71);
+    --options-color: #ffd9d9;
 }
 
 [data-theme='light-blue'] {
@@ -19,6 +18,7 @@
     --text-primary: rgb(21, 48, 71);
     --secondary-color: rgba(76, 172, 255, 0.15);
     --accent-color: rgba(76, 172, 255, 0.62);
+    --options-color: #d9eeff;
 }
 
 [data-theme='light-green'] {
@@ -26,26 +26,37 @@
     --text-primary: rgb(20, 64, 29);
     --secondary-color: rgba(77, 218, 110, 0.15);
     --accent-color: rgba(77, 218, 110, 0.62);
+    --options-color: #dafae0;
 }
 
 [data-theme='dark-red'] {
-    --background-body: rgb(13, 4, 4);
-    --text-primary: rgb(255, 242, 242);
-    --secondary-color: rgba(255, 76, 76, 0.15);
-    --accent-color: rgba(255, 76, 76, 0.71);
+    --background-body: rgb(13 6 4);
+    --text-primary: rgb(255 246 242);
+    --secondary-color: rgb(255 84 76 / 15%);
+    --accent-color: rgb(249 46 11 / 71%);
+    --options-color: rgb(44 13 4 / 93%);
 }
+// [data-theme='dark-red'] {
+//     --background-body: rgb(13, 4, 4);
+//     --text-primary: rgb(255, 242, 242);
+//     --secondary-color: rgba(255, 76, 76, 0.15);
+//     --accent-color: rgba(255, 76, 76, 0.71);
+//     --options-color: #451616;
+// }
 
 [data-theme='dark-blue'] {
     --background-body: rgb(4, 9, 13);
     --text-primary: rgb(242, 249, 255);
-    --secondary-color: rgba(76, 172, 255, 0.15);
-    --accent-color: rgba(76, 172, 255, 0.62);
+    --secondary-color: rgba(76, 121, 255, 0.15);
+    --accent-color: rgb(87 77 255 / 62%);
+    --options-color: #111230;
 }
 [data-theme='dark-green'] {
     --background-body: rgb(4, 13, 6);
     --text-primary: rgb(242, 255, 245);
     --secondary-color: rgba(77, 218, 110, 0.15);
-    --accent-color: rgba(77, 218, 110, 0.62);
+    --accent-color: rgb(52 208 32 / 62%);
+    --options-color: #15331b;
 }
 
 body {
@@ -64,4 +75,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }

@@ -1,0 +1,43 @@
+.control-panel {
+    position: relative;
+    display: flex;
+    margin-top: calc(var(--step) * 3);
+
+    svg {
+        path {
+            fill: var(--text-primary);
+        }
+    }
+    .secondary-button,
+    .primary-button {
+        cursor: pointer;
+        border: none;
+    }
+
+    .secondary-button {
+        margin: var(--step);
+        padding: calc(var(--step) * 3);
+        background-color: var(--secondary-color);
+        border-radius: calc(var(--step) * 3);
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .primary-button {
+        margin: 0 calc(var(--step));
+        padding: calc(var(--step) * 4) calc(var(--step) * 6);
+        background-color: var(--accent-color);
+        border-radius: calc(var(--step) * 4);
+
+        svg {
+            width: 22px;
+            height: 26px;
+        }
+    }
+}
