@@ -1,5 +1,5 @@
 import './ControlPanel.scss';
-import {CONTROL_PANEL_ICONS as icons} from '../../data';
+import {audioMainButton, audioSecondButton, CONTROL_PANEL_ICONS as icons} from '../../data';
 import SecondaryButton from './SecondaryButton';
 import PrimaryButton from './PrimaryButton';
 import Options from './Options/Options';
@@ -11,10 +11,8 @@ import {useState} from 'react';
 
 export default function ControlPanel() {
     const [visibleOptions, setVisibleOptions] = useState(false);
-    const {id, timer, timeInMinutes, seconds} = useSelector(selectMode);
+    const {id, timer} = useSelector(selectMode);
     const dispatch = useDispatch();
-    const audioMainButton = new Audio('./audio/button.wav');
-    const audioSecondButton = new Audio('./audio/second-button.mp3');
 
     const handleStartAndPause = () => {
         audioMainButton.play();

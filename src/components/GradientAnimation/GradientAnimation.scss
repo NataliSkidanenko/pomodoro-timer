@@ -39,7 +39,7 @@
             background-image: url('./img/3-gradient.png');
             background-size: cover;
             mix-blend-mode: hard-light;
-            animation: gradient 15s ease-in-out infinite;
+            animation: gradient 20s ease-in-out infinite;
         }
     }
 }
@@ -49,17 +49,19 @@
         transform: scale(1) skew(0 0);
     }
     20% {
-        transform: skew(-2deg, -4deg);
+        transform: skew(-5deg, -4deg);
     }
     40% {
         transform: scale(1.6) skew(15deg, 10deg);
     }
     60% {
-        transform: scale(0.8) skew(-4deg, -2deg);
+        transform: scale(0.8) skew(-2deg, -4deg);
     }
+
     80% {
         transform: scale(1.5) skew(5deg, 13deg);
     }
+
     100% {
         transform: scale(1) skew(0 0);
     }

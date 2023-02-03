@@ -1,4 +1,3 @@
-@import './variable.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,800&display=swap');
 
 :root {
@@ -36,13 +35,6 @@
     --accent-color: rgb(249 46 11 / 71%);
     --options-color: rgb(44 13 4 / 93%);
 }
-// [data-theme='dark-red'] {
-//     --background-body: rgb(13, 4, 4);
-//     --text-primary: rgb(255, 242, 242);
-//     --secondary-color: rgba(255, 76, 76, 0.15);
-//     --accent-color: rgba(255, 76, 76, 0.71);
-//     --options-color: #451616;
-// }
 
 [data-theme='dark-blue'] {
     --background-body: rgb(4, 9, 13);

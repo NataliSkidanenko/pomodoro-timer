@@ -178,4 +178,6 @@ export const OPTIONS_ICON = {
 };
 
 export const audioAlarm = new Audio('./audio/alarm.mp3');
+export const audioMainButton = new Audio('./audio/button.wav');
+export const audioSecondButton = new Audio('./audio/second-button.mp3');
 export const DEFAULT_TITLE = 'Pomodoro Timer';
