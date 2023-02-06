@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux';
-import {selectMode} from '../../rdx/store';
+import {selectMode, selectPreferences} from '../../rdx/store';
 import './GradientAnimation.scss';
 
 export default function GradientAnimation() {

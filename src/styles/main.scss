@@ -33,25 +33,26 @@
     --text-primary: rgb(255 246 242);
     --secondary-color: rgb(255 84 76 / 15%);
     --accent-color: rgb(249 46 11 / 71%);
-    --options-color: rgb(44 13 4 / 93%);
+    --options-color: rgb(44 13 4 / 98%);
 }
 
 [data-theme='dark-blue'] {
     --background-body: rgb(4, 9, 13);
     --text-primary: rgb(242, 249, 255);
-    --secondary-color: rgba(76, 121, 255, 0.15);
+    --secondary-color: rgba(68, 112, 243, 0.15);
     --accent-color: rgb(87 77 255 / 62%);
-    --options-color: #111230;
+    --options-color: rgba(14, 29, 58, 0.97);
 }
 [data-theme='dark-green'] {
     --background-body: rgb(4, 13, 6);
     --text-primary: rgb(242, 255, 245);
     --secondary-color: rgba(77, 218, 110, 0.15);
     --accent-color: rgb(52 208 32 / 62%);
-    --options-color: #15331b;
+    --options-color: rgba(19, 48, 25, 0.96);
 }
 
 body {
+    overflow: hidden;
     font-family: 'Roboto Flex', 'Roboto', Arial, sans-serif;
     background-color: var(--background-body);
     color: var(--text-primary);

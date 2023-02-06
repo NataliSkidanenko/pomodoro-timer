@@ -1,6 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {MODES} from '../../data';
-import {audioAlarm} from '../../data';
 
 const initialState = {
     ...MODES[0],
@@ -25,10 +24,13 @@ export const modeSlice = createSlice({
             clearInterval(mode.timer);
             mode.timer = null;
         },
+        setInitialTime: (mode, action) => {
+            mode.initialTimeInMinutes = action.payload;
+        },
         countTime: (mode, action) => {
             if (mode.timeInMinutes === 0 && mode.seconds === 0) {
                 mode.timeInMinutes = mode.initialTimeInMinutes;
-                audioAlarm.play();
+
                 clearInterval(action.payload);
                 mode.timer = null;
             } else {
@@ -46,7 +48,7 @@ export const modeSlice = createSlice({
     },
 });
 
-export const {setMode, countTime, setTimer} = modeSlice.actions;
+export const {setMode, countTime, setTimer, setInitialTime} = modeSlice.actions;
 
 export const asyncTimer = () => (dispatch) => {
     const timer = setInterval(() => {
