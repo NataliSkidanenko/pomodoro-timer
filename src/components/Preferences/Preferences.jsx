@@ -1,6 +1,6 @@
 import './Preferences.scss';
 import {ConfigProvider, InputNumber, Switch} from 'antd';
-import ReactHtmlParser from 'react-html-parser';
+import parse from 'html-react-parser';
 import {MODES, PREFERENCES_ICONS} from '../../data';
 import {useDispatch, useSelector} from 'react-redux';
 import {selectMode, selectPreferences} from '../../rdx/store';
@@ -56,7 +56,7 @@ export default function Preferences() {
                             <span
                                 className="preferences__close"
                                 onClick={() => dispatch(toggleVisibility())}>
-                                {ReactHtmlParser(PREFERENCES_ICONS.close)}
+                                {parse(PREFERENCES_ICONS.close)}
                             </span>
                         </div>
                         <div className="preferences__item preference">
