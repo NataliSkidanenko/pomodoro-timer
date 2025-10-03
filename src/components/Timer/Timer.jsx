@@ -11,7 +11,7 @@ export default function Timer({minutes, seconds}) {
 
     return (
         <div className="timer">
-            <p className="timer__numbers timer__numbers-accent">
+            <p className="timer__numbers timer__numbers--accent">
                 {minutes < 10 ? '0' + minutes : minutes}
             </p>
             <p className="timer__numbers">{seconds < 10 ? '0' + seconds : seconds}</p>
