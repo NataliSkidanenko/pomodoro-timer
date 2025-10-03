@@ -8,7 +8,7 @@ import {selectMode, selectPreferences} from '../../rdx/store';
 import {MODES} from '../../data';
 import {asyncTimer, setMode, setTimer} from '../../rdx/slices/modeSlice';
 import {useState} from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import parse from 'html-react-parser';
 import {logicalPropertiesLinter} from '@ant-design/cssinjs';
 
 export default function ControlPanel() {
@@ -53,17 +53,15 @@ export default function ControlPanel() {
                 <Options visible={visibleOptions} />
                 <SecondaryButton
                     icon={
-                        visibleOptions
-                            ? ReactHtmlParser(icons.close)
-                            : ReactHtmlParser(icons.options)
+                        visibleOptions ? parse(icons.close) : parse(icons.options)
                     }
                     handlerClick={handleVisibilityOptions}
                 />
                 <PrimaryButton
-                    icon={timer ? ReactHtmlParser(icons.pause) : ReactHtmlParser(icons.start)}
+                    icon={timer ? parse(icons.pause) : parse(icons.start)}
                     handlerClick={handleStartAndPause}
                 />
-                <SecondaryButton icon={ReactHtmlParser(icons.next)} handlerClick={handleNextMode} />
+                <SecondaryButton icon={parse(icons.next)} handlerClick={handleNextMode} />
             </div>
         </>
     );
